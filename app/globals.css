@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-danger: var(--danger);
+  --color-danger-foreground: var(--danger-foreground);
+  --color-warning: var(--warning);
+  --color-success: var(--success);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 0.75rem;
+
+  /* Deep slate BI theme */
+  --background: oklch(0.16 0.014 250);
+  --foreground: oklch(0.96 0.005 250);
+
+  --card: oklch(0.2 0.015 252);
+  --card-foreground: oklch(0.96 0.005 250);
+
+  --muted: oklch(0.26 0.015 252);
+  --muted-foreground: oklch(0.68 0.012 252);
+
+  --border: oklch(0.3 0.015 252);
+  --input: oklch(0.28 0.015 252);
+  --ring: oklch(0.72 0.12 190);
+
+  /* Teal brand */
+  --primary: oklch(0.74 0.13 190);
+  --primary-foreground: oklch(0.16 0.014 250);
+
+  /* Amber accent */
+  --accent: oklch(0.8 0.14 80);
+  --accent-foreground: oklch(0.16 0.014 250);
+
+  /* Rose danger (attrition risk) */
+  --danger: oklch(0.65 0.2 20);
+  --danger-foreground: oklch(0.98 0.005 250);
+
+  --warning: oklch(0.8 0.14 80);
+  --success: oklch(0.74 0.14 160);
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  background-color: var(--background);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted-foreground);
+}
+
+/* Leaflet dark tweaks */
+.leaflet-container {
+  background: var(--muted) !important;
+  font-family: var(--font-sans);
+}
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  background: var(--card);
+  color: var(--card-foreground);
+  border: 1px solid var(--border);
+}
+.leaflet-bar a {
+  background: var(--card);
+  color: var(--card-foreground);
+  border-color: var(--border);
+}
+.leaflet-bar a:hover {
+  background: var(--muted);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-in {
+  animation: fadeInUp 0.4s ease both;
+}
