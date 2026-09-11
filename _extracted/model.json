@@ -1,0 +1,152 @@
+{
+  "intercept": -0.13815756723704534,
+  "coefficients": {
+    "Age_clean": -0.038035,
+    "PerformanceRating_clean": -0.25248,
+    "YearsAtCompany": -0.026889,
+    "TrainingHoursLastYear": -0.030473,
+    "SatisfactionScore": -0.450493,
+    "Annual Salary": -0.041711,
+    "Department_Engineering": -0.262392,
+    "Department_Finance": -0.3128,
+    "Department_HR": -0.311173,
+    "Department_IT": -0.38487,
+    "Department_Legal": -0.295615,
+    "Department_Marketing": -0.337056,
+    "Department_Operations": -0.39017,
+    "Department_Procurement": -0.282627,
+    "Department_Sales": 0.393833,
+    "Department_Unknown": -0.119484,
+    "EducationLevel_Diploma": 0.124809,
+    "EducationLevel_High School": -0.152222,
+    "EducationLevel_Masters": -0.115175,
+    "EducationLevel_PhD": -0.1658,
+    "EducationLevel_Unknown": 0.250766,
+    "OverTime_Unknown": 0.378694,
+    "OverTime_Yes": 0.785376,
+    "Work Mode_Onsite": 0.007928,
+    "Work Mode_Remote": 0.007347,
+    "Work Mode_Unknown": -0.119484,
+    "Marital status_Married": 0.035551,
+    "Marital status_Single": -0.119901,
+    "Marital status_Unknown": 0.109541,
+    "Marital status_Widowed": -0.087169,
+    "Gender_Male": 0.146081,
+    "Gender_Unknown": 0.118743,
+    "EverPromoted_Unknown": 0.024145,
+    "EverPromoted_Yes": -0.092532
+  },
+  "num_features": [
+    "Age_clean",
+    "PerformanceRating_clean",
+    "YearsAtCompany",
+    "TrainingHoursLastYear",
+    "SatisfactionScore",
+    "Annual Salary"
+  ],
+  "scaler_mean": {
+    "Age_clean": 39.8140625,
+    "PerformanceRating_clean": 3.024330357142857,
+    "YearsAtCompany": 7.527008928571429,
+    "TrainingHoursLastYear": 39.558482142857144,
+    "SatisfactionScore": 3.2613839285714286,
+    "Annual Salary": 119309.10446428572
+  },
+  "scaler_scale": {
+    "Age_clean": 10.745722924711263,
+    "PerformanceRating_clean": 1.3874716849645776,
+    "YearsAtCompany": 3.770538160233553,
+    "TrainingHoursLastYear": 23.06820572895197,
+    "SatisfactionScore": 1.2767599390192998,
+    "Annual Salary": 54231.703118542646
+  },
+  "cat_features": [
+    "Department",
+    "EducationLevel",
+    "OverTime",
+    "Work Mode",
+    "Marital status",
+    "Gender",
+    "EverPromoted"
+  ],
+  "cat_categories": {
+    "Department": [
+      "Customer Support",
+      "Engineering",
+      "Finance",
+      "HR",
+      "IT",
+      "Legal",
+      "Marketing",
+      "Operations",
+      "Procurement",
+      "Sales",
+      "Unknown"
+    ],
+    "EducationLevel": [
+      "Bachelors",
+      "Diploma",
+      "High School",
+      "Masters",
+      "PhD",
+      "Unknown"
+    ],
+    "OverTime": [
+      "No",
+      "Unknown",
+      "Yes"
+    ],
+    "Work Mode": [
+      "Hybrid",
+      "Onsite",
+      "Remote",
+      "Unknown"
+    ],
+    "Marital status": [
+      "Divorced",
+      "Married",
+      "Single",
+      "Unknown",
+      "Widowed"
+    ],
+    "Gender": [
+      "Female",
+      "Male",
+      "Unknown"
+    ],
+    "EverPromoted": [
+      "No",
+      "Unknown",
+      "Yes"
+    ]
+  },
+  "num_medians": {
+    "Age_clean": 39,
+    "PerformanceRating_clean": 3,
+    "YearsAtCompany": 7.6,
+    "TrainingHoursLastYear": 40,
+    "SatisfactionScore": 3,
+    "Annual Salary": 119381
+  },
+  "metrics": {
+    "accuracy": 0.628,
+    "precision": 0.472,
+    "recall": 0.5601,
+    "f1": 0.5123,
+    "roc_auc": 0.6696,
+    "n_train": 4480,
+    "n_test": 1121,
+    "n_features": 34,
+    "positive_rate_overall": 0.3487,
+    "confusion_matrix": [
+      [
+        485,
+        245
+      ],
+      [
+        172,
+        219
+      ]
+    ]
+  }
+}
